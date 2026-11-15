@@ -76,7 +76,7 @@ def main(argv=None) -> int:
     for name in ("build", "plan"):
         s = sub.add_parser(name)
         s.add_argument("region")
-        s.add_argument("--relief", type=Path, default=Path("../Relief"))
+        s.add_argument("--relief", type=Path, default=Path("../kit-relief"))
         s.add_argument(
             "--engine",
             choices=["layers", "direct"],
