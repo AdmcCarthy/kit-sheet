@@ -1,5 +1,9 @@
 # Sheet
 
+[![CI](https://github.com/AdmcCarthy/kit-sheet/actions/workflows/ci.yml/badge.svg)](https://github.com/AdmcCarthy/kit-sheet/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/python-%E2%89%A53.12-lightgrey)
+[![Licence](https://img.shields.io/badge/licence-MIT%20with%20acknowledgement-lightgrey)](LICENSE)
+
 Static, print and plot-grade map sheets built on [Relief](https://github.com/AdmcCarthy/kit-relief) terrain and
 [Plate](https://github.com/AdmcCarthy/kit-plate) page conventions. Real paper sizes (A4 to A0), a numpy terrain renderer that
 streams in strips (no browser canvas limit), vector overlays and graticule, and a PDF with live text.
