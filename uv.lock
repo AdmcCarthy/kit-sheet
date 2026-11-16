@@ -412,7 +412,7 @@ wheels = [
 [[package]]
 name = "plate"
 version = "0.1.0"
-source = { git = "https://github.com/AdmcCarthy/Plate?tag=v0.1.0#c21a2b029e523d9dca312b415656515bd7705bde" }
+source = { git = "https://github.com/AdmcCarthy/kit-plate?tag=v0.1.0#c21a2b029e523d9dca312b415656515bd7705bde" }
 dependencies = [
     { name = "jinja2" },
     { name = "pillow" },
@@ -807,7 +807,7 @@ dev = [
 requires-dist = [
     { name = "numpy", specifier = ">=2" },
     { name = "pillow", specifier = ">=11" },
-    { name = "plate", git = "https://github.com/AdmcCarthy/Plate?tag=v0.1.0" },
+    { name = "plate", git = "https://github.com/AdmcCarthy/kit-plate?tag=v0.1.0" },
     { name = "playwright", specifier = ">=1.44" },
     { name = "pyproj", specifier = ">=3.7" },
     { name = "rasterio", specifier = ">=1.4" },
