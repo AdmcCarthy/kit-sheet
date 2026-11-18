@@ -49,4 +49,4 @@ the licence is not OSI-approved. Third-party data and vendored code keep their o
 - `--extent x0,y0,x1,y1` (region CRS metres) frames that box instead of the whole region, for a sheet on one part of a
   Relief region (the East Shetland Platform inside `north_sea`).
 - `--shade-model hard` asks Relief for a single-light hillshade (315/45) instead of the soft six-light model.
-  The first sheets made this way are in `source-to-sink/preview/sheets/`.
+  The first sheets made this way are in the private catchment pipeline's `preview/sheets/` folder.
