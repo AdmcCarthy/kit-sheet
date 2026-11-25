@@ -42,6 +42,21 @@ exception. Precedence among rules: Law, then Defaults in this file, then `house/
 - **[Preference]** Act on the plan; stop at agreed gates and report outcomes plainly, including failures and skipped steps.
 - **[Law]** Never make anything public, delete data, force-push or commit someone's uncommitted work unasked.
 - **[Default]** Never run long or costly data fetches unasked.
+- **[Law]** Data ingestion re-runs only when its input has changed. Every new ingestion or processing step records what it read
+  (a content hash, or ETag, size and time, or a fingerprint of path, size and modified time) together with its settings and code
+  version. Before it runs again it checks that record and stops with "unchanged" when nothing differs and its outputs exist. A
+  `--force` option overrides the check, and a dry run says whether it would run. The step's tests show that a second run on the
+  same input writes nothing. Existing patterns to copy are listed in the maintainer's Copilot instructions.
+- **[Default]** No source reaches an output except through a port: every golden table, open or classified, is declared as a port in
+  the data contract with its tier, unit, confidence, key, grain and golden-key foreign key, and is read through the data-access layer.
+  A source is ingested only with a classification row, an adapter and gate with an unchanged second run, a golden target, a port and
+  a clean `kdc gate`. No data from the USA is ingested from internal or restricted sources (owner rule, 2026-11-23). Checklist:
+  the ingestion documents of the data contract and of the data engine.
+- **[Law]** Synthetic and test outputs of the internal and restricted tiers are designed and built on top of the contract on the
+  open-data computer, even where a document or a role states a restriction on the tier (owner's ruling, 2026-11-25). They use the
+  contract's names, types and port metadata only: no real classified row, value, count, path or source file is read or copied, and
+  a synthetic root is marked `SYNTHETIC.json` (`"synthetic": true`), kept apart from the open roots and labelled with the tier it
+  imitates.
 - **[Preference]** `gh repo create` may be blocked by the auto-mode classifier: prepare everything locally and hand over the
   exact commands.
 - **[Default]** Pin dependencies between repos by tag; dependencies run one way only. Keep heavy ingestion out of the
