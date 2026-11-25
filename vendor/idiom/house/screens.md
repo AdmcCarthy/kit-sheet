@@ -3,6 +3,10 @@
 **[Default]** Published stories are designed for a desktop screen first. A phone is checked and must work, but it does not
 set the design: where the two pull apart, the screen wins, and map-heavy stories are the clearest case.
 
+**[Default]** The phone check applies to SubScout data stories only. Every other output (notebook pages, lab story pages,
+dashboards, decks, printed sheets, reports, documentation) is designed and checked on the desktop screens below; no phone
+check, no phone breakpoint written for it and no time spent on it.
+
 ## Reference screens
 
 | Name | Viewport (CSS px) | Used for |
